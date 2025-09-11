@@ -1,8 +1,12 @@
-import os
-os.system("cls")
+import streamlit as st
+import time
 
-nota1=float(input("escreva uma nota1:"))
-nota=float(input("escreva uma nota:"))
-media= (nota1 + nota2)/2
+st.title("TABUADA")
 
+# Entrada do usuário
+numero = st.number_input("Digite um número para ver a tabuada:", step=1, value=1)
 
+# Mostrar a tabuada
+st.write(f"### Tabuada do {numero}")
+for i in range(1, 11):
+    st.write(f"{numero} x {i} = {numero * i}")
